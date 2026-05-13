@@ -72,8 +72,7 @@ src/app/
 └── shared/              # Componentes reutilizables
 
 ### 🔗 API Backend
-    Este frontend consume la APR REST del backend
-    [api-encriptation-backend](https://github.com/manuel101284/api-encriptation-backend/tree/main)
+Este frontend consume la APR REST del backend - [api-encriptation-backend](https://github.com/manuel101284/api-encriptation-backend/tree/main)
 
 ### 📱 Vistas
 
