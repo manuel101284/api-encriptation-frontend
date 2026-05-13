@@ -1,59 +1,87 @@
-# FrontEncryption
+# 🎨 Frontend Encriptación
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.5.
+Aplicación Angular para gestión de usuarios con encriptación de datos sensibles.
 
-## Development server
+## 🚀 Tecnologías
 
-To start a local development server, run:
+- **Angular 21**
+- **TypeScript**
+- **Bootstrap 5**
+- **RxJS**
 
-```bash
-ng serve
-```
+## ✨ Características
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- ✅ Formulario de registro con validaciones
+- ✅ Lista de usuarios con CRUD completo
+- ✅ Modales para ver detalles y editar
+- ✅ Validaciones en tiempo real:
+  - Contraseña: 8-40 caracteres, letra, número, símbolo
+  - Email formato válido
+  - Teléfono: 7-15 dígitos
+  - Edad: 18-120 años
+- ✅ Consumo de API REST encriptada
 
-## Code scaffolding
+## 🔧 Configuración
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Prerrequisitos
 
-```bash
-ng generate component component-name
-```
+- Node.js 18+
+- Angular CLI 21
+- Backend corriendo en `http://localhost:8080`
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Pasos
 
-```bash
-ng generate --help
-```
+1. **Clonar el repositorio**
 
-## Building
+   ```bash
+   git clone https://github.com/manuel101284/front-encryption.git
+   cd front-encryption
+   ```
 
-To build the project run:
+2. **Instalar dependencias**
 
-```bash
-ng build
-```
+   ```bash
+   npm install
+   ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+3. **Configurar entorno**
+  Editar src/environments/environment.ts
 
-## Running unit tests
+  ```typescript
+  export const environment = {
+    production: false,
+    apiUrl: 'http://localhost:8080/api'
+  };
+  ```
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+4. **Ejecutar la aplicación**
+  
+  ```bash
+  ng serve --open
+  ```
 
-```bash
-ng test
-```
+### 📁 Estrucutra del proyecto
 
-## Running end-to-end tests
+src/app/
+├── core/
+│   ├── models/          # Interfaces TypeScript
+│   └── services/        # Servicios HTTP
+├── features/
+│   ├── auth/register/   # Formulario de registro
+│   └── users/user-list/ # Lista y gestión de usuarios
+└── shared/              # Componentes reutilizables
 
-For end-to-end (e2e) testing, run:
+### 🔗 API Backend
+    Este frontend consume la APR REST del backend
+    [api-encriptation-backend](https://github.com/manuel101284/api-encriptation-backend/tree/main)
 
-```bash
-ng e2e
-```
+### 📱 Vistas
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+    /register - Registro de nuevos usuarios
 
-## Additional Resources
+    /users - Lista de usuarios con opciones de edición y eliminación
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### ✒️ Autor
+
+Manuel Ricardo Castellanos - [Github](https://github.com/manuel101284)
+
